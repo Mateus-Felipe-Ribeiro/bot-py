@@ -4,9 +4,12 @@
 import openpyxl
 import pyautogui
 
+# Abre arquivo
 workbook = openpyxl.load_workbook('vendas_de_produtos.xlsx')
+# pega o nome da planilha no arquivo
 vendas_sheet = workbook['vendas']
 
+# Rotina de clicks para cada linha da tabela
 for linha in vendas_sheet.iter_rows(min_row=2):
     # nome
     pyautogui.click(1808,452,duration=1.5)
